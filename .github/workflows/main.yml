@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 permissions:
   contents: write          # allow the action (PAT) to push
