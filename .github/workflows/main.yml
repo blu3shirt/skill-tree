@@ -1,4 +1,6 @@
+# .github/workflows/main.yml
 name: Deploy
+
 on: [push]
 
 jobs:
@@ -11,8 +13,12 @@ jobs:
         with:
           node-version: '18'
 
-      - run: npm ci && npm run build
+      - name: Install & Build
+        run: |
+          npm install
+          npm run build
 
-      - uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./docs
