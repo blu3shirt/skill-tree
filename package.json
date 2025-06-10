@@ -40,7 +40,7 @@
 		"lit-check": "npx lit-analyzer . --strict",
 		"generate-blueprint": "node --experimental-modules generate-blueprint.js",
 		"readme": "npm run generate-blueprint && npx @appnest/readme generate",
-		"snowpack": "npx snowpack --optimize --include \"src/**/*.js\"",
+		"snowpack": "npx snowpack build --optimize --include \"src/**/*.js\" --out docs",
 		"prepare": "npm run snowpack"
 	},
 	"contributors": [
